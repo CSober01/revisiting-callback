@@ -9,9 +9,14 @@
 
 // Start Coding Here
 
+const sendNotification = (action) => action();
+const postCreated = () => `📝 แจ้งเตือน: โพสต์ของคุณถูกสร้างสำเร็จ!`;
+const postLiked = () => `👍 แจ้งเตือน: มีคนมากดไลค์โพสต์ของคุณ!`;
+const postCommented = () => `💬 แจ้งเตือน: มีคนมาคอมเมนต์ในโพสต์ของคุณ!`;
+const postShared = () => `🔄 แจ้งเตือน: มีคนแชร์โพสต์ของคุณ!`;
 
 // เมื่อ function นี้ทำงานจะเห็นผลลัพธ์ดังนี้
-console.log(sendNotification(postCreated));   // 📝 แจ้งเตือน: โพสต์ของคุณถูกสร้างสำเร็จ!
-console.log(sendNotification(postLiked));     // 👍 แจ้งเตือน: มีคนมากดไลค์โพสต์ของคุณ!
+console.log(sendNotification(postCreated)); // 📝 แจ้งเตือน: โพสต์ของคุณถูกสร้างสำเร็จ!
+console.log(sendNotification(postLiked)); // 👍 แจ้งเตือน: มีคนมากดไลค์โพสต์ของคุณ!
 console.log(sendNotification(postCommented)); // 💬 แจ้งเตือน: มีคนมาคอมเมนต์ในโพสต์ของคุณ!
-console.log(sendNotification(postShared));    // 🔄 แจ้งเตือน: มีคนแชร์โพสต์ของคุณ!
+console.log(sendNotification(postShared)); // 🔄 แจ้งเตือน: มีคนแชร์โพสต์ของคุณ!
