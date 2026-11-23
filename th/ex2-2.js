@@ -12,8 +12,12 @@ Answer:
 3. หากต้องสอนเพื่อนให้เข้าใจ Callback & Higher-Order Function ใน 5 นาที จะอธิบายอย่างไร 
 Answer:  
 
-Callback คือ การเรียกใช้ function ด้วย Higher-Order Function 
-เช่น const calculate = (num1, num2, cal) => cal(num1, num2); โดยใน parameter cal คือ Function ที่ถูกเรียกใช้โดย Function calculate
-Higher-Order Function คือ Function ที่ระบุไว้ว่าจะเอาข้อมูลไปคำนวนหรือทำอะไรต่อ
-เช่น calculate(10, 5, add) โดย parameter add คือ Higher-Order Function ที่ถูกส่งไปใช้ใน calculate
+Callback คือ Function ที่ถูกส่งเข้าไปเป็น Argument ของ Function อื่น เพื่อให้ Function นั้นเรียกใช้งานภายหลัง
+เช่น const add = (num1, num2) => num1 + num2; เป็น Callback Function เพราะถูกส่งเข้าไปใน calculate
+Higher-Order Function คือ Function ที่สามารถรับ Function อื่นเข้ามาเป็น Parameter หรือส่ง Function กลับออกมาเป็น Return Value ได้
+เช่น calculate(10, 5, add) โดย calculate เป็น Higher-Order Function เพราะรับ Function (cal) เข้ามาเป็น Parameter
+
+สรุปคือ 
+Callback = Function ที่ถูกส่งไปให้ Function อื่นเรียกใช้
+Higher-Order Function = Function ที่รับ Function อื่นหรือคืน Function ออกมาได้
 */
